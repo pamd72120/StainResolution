@@ -25,7 +25,7 @@
     <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX4" populated="true" UUID="480d5348-f346-442d-a6da-a950db510e66" clustered="false" name="User_pk" physicalName="customer_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX4" populated="true" UUID="480d5348-f346-442d-a6da-a950db510e66" clustered="false" name="User_pk" physicalName="user_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC5" populated="true" UUID="b3e0263a-5f77-4c3b-b96b-bde9650d3836" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="UserId" physicalName="UserId" />
     </index>
    </folder>
@@ -48,7 +48,7 @@
     <folder id="FOLTAB62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB64" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX10" populated="true" UUID="eb879c5a-a0c9-4caa-abdc-26e67dd915b8" clustered="false" name="StainType_pk" physicalName="boat_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX10" populated="true" UUID="eb879c5a-a0c9-4caa-abdc-26e67dd915b8" clustered="false" name="StainType_pk" physicalName="staintype_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC11" populated="true" UUID="7ed9a1a5-537b-4e83-8955-a808a8ebd5df" ascendingOrDescending="UNSPECIFIED" column-ref="COL7" name="StainTypeId" physicalName="StainTypeId" />
     </index>
    </folder>
@@ -59,7 +59,7 @@
     <column id="COL13" populated="true" UUID="6fbb7c5e-2d7c-4773-851f-ee853d44366e" autoIncrement="false" autoIncrementSequenceName="Textile_TextileId_seq" defaultValue="" name="TextileId" nullable="0" physicalName="TextileId" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL14" populated="true" UUID="6d35b9d6-92f3-4060-94e2-d1835563bddf" autoIncrement="false" autoIncrementSequenceName="StainType_StainTypeId_seq" defaultValue="" name="StainTypeId" nullable="0" physicalName="StainTypeId" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL14" populated="true" UUID="6d35b9d6-92f3-4060-94e2-d1835563bddf" autoIncrement="false" autoIncrementSequenceName="StainType_StainTypeId_seq_1" defaultValue="" name="StainTypeId" nullable="0" physicalName="StainTypeId" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL15" populated="true" UUID="968567ed-4801-4613-be70-5494475a2cca" autoIncrement="false" autoIncrementSequenceName="Textile_TextileName_seq" defaultValue="" name="TextileName" nullable="0" physicalName="TextileName" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -71,7 +71,7 @@
     <folder id="FOLTAB122" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB124" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX16" populated="true" UUID="8f350854-77a9-4138-b397-71895cbb3415" clustered="false" name="Textile_pk" physicalName="Textile_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX16" populated="true" UUID="8f350854-77a9-4138-b397-71895cbb3415" clustered="false" name="Textile_pk" physicalName="textile_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC17" populated="true" UUID="a3751d73-de89-4e28-bcec-a315d895608a" ascendingOrDescending="UNSPECIFIED" column-ref="COL13" name="TextileId" physicalName="TextileId" />
      <index-column id="IDC18" populated="true" UUID="d588042e-ecfb-4507-aeb1-33912baaf8f8" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="StainTypeId" physicalName="StainTypeId" />
     </index>
@@ -83,7 +83,7 @@
     <column id="COL20" populated="true" UUID="9acccbce-c54c-4309-aeba-bc32fed7e37b" autoIncrement="false" autoIncrementSequenceName="Treatment_TreatmentID_seq" defaultValue="" name="TreatmentId" nullable="0" physicalName="TreatmentID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL21" populated="true" UUID="204dba0a-4e80-40d2-8cd9-ccaa30b3a9da" autoIncrement="false" autoIncrementSequenceName="StainType_StainTypeId_seq" defaultValue="" name="StainTypeId" nullable="0" physicalName="StainTypeId" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL21" populated="true" UUID="204dba0a-4e80-40d2-8cd9-ccaa30b3a9da" autoIncrement="false" autoIncrementSequenceName="StainType_StainTypeId_seq_2" defaultValue="" name="StainTypeId" nullable="0" physicalName="StainTypeId" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL22" populated="true" UUID="3cf09088-0074-4393-91de-a32c016f261b" autoIncrement="false" autoIncrementSequenceName="Treatment_Instruction_seq" defaultValue="" name="Instruction" nullable="0" physicalName="Instruction" precision="400" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -98,7 +98,7 @@
     <folder id="FOLTAB192" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB194" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX24" populated="true" UUID="4b617a79-8e33-426a-bcc2-dfe13c29a067" clustered="false" name="Treatment_pk" physicalName="Treatment_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX24" populated="true" UUID="4b617a79-8e33-426a-bcc2-dfe13c29a067" clustered="false" name="Treatment_pk" physicalName="treatment_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC25" populated="true" UUID="e5c5de7a-957c-49dc-accb-09d622b11a44" ascendingOrDescending="UNSPECIFIED" column-ref="COL20" name="TreatmentId" physicalName="TreatmentID" />
      <index-column id="IDC26" populated="true" UUID="493b888b-18bd-4594-8bc1-e264a2b11516" ascendingOrDescending="UNSPECIFIED" column-ref="COL21" name="StainTypeId" physicalName="StainTypeId" />
     </index>
@@ -128,7 +128,7 @@
     <folder id="FOLTAB272" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB274" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX33" populated="true" UUID="b7fe94c0-48b4-495a-adf8-5e1957d166bd" clustered="false" name="Supply_pk" physicalName="Supply_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX33" populated="true" UUID="b7fe94c0-48b4-495a-adf8-5e1957d166bd" clustered="false" name="Supply_pk" physicalName="supply_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC34" populated="true" UUID="2fc1c5de-676d-484e-894a-b555642a636a" ascendingOrDescending="UNSPECIFIED" column-ref="COL28" name="SupplyId" physicalName="SupplyId" />
      <index-column id="IDC35" populated="true" UUID="61f3d984-3e67-4d7d-afa6-f9ec6ced0f23" ascendingOrDescending="UNSPECIFIED" column-ref="COL29" name="TreatmentSupplyID" physicalName="TreatmentSupplyId" />
      <index-column id="IDC36" populated="true" UUID="8bf47ed7-e33f-4af0-b642-b894addc959a" ascendingOrDescending="UNSPECIFIED" column-ref="COL30" name="TreatmentId" physicalName="TreatmentID" />
@@ -153,27 +153,27 @@
     <folder id="FOLTAB372" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB374" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX41" populated="true" UUID="abb5c8c9-800f-42c5-8fc5-923bf11c9d24" clustered="false" name="TreatmentSupply_pk" physicalName="TreatmentSupply_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX41" populated="true" UUID="abb5c8c9-800f-42c5-8fc5-923bf11c9d24" clustered="false" name="TreatmentSupply_pk" physicalName="treatmentsupply_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC42" populated="true" UUID="ce350755-7655-4c04-93da-d641f66f09c4" ascendingOrDescending="UNSPECIFIED" column-ref="COL38" name="TreatmentSupplyID" physicalName="TreatmentSupplyId" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL43" populated="true" UUID="24ba5ace-9d99-46fb-ab6f-25cc6f3376fe" deferrability="7" deleteRule="3" fk-table-ref="TAB12" fkCardinality="7" identifying="true" name="StainType_Textile_fk" physicalName="StainType_Textile_fk" pk-table-ref="TAB6" pkCardinality="2" updateRule="3" >
+   <relationship id="REL43" populated="true" UUID="24ba5ace-9d99-46fb-ab6f-25cc6f3376fe" deferrability="7" deleteRule="3" fk-table-ref="TAB12" fkCardinality="7" identifying="true" name="StainType_Textile_fk" physicalName="staintype_textile_fk" pk-table-ref="TAB6" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP44" populated="true" UUID="7bade69a-5599-485d-9675-901373202ab8" fk-column-ref="COL14" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL7" />
    </relationship>
-   <relationship id="REL45" populated="true" UUID="b72398f2-eafc-4036-96fb-71e716c18f7d" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="true" name="StainType_Treatment_fk" physicalName="StainType_Treatment_fk" pk-table-ref="TAB6" pkCardinality="2" updateRule="3" >
+   <relationship id="REL45" populated="true" UUID="b72398f2-eafc-4036-96fb-71e716c18f7d" deferrability="7" deleteRule="3" fk-table-ref="TAB19" fkCardinality="7" identifying="true" name="StainType_Treatment_fk" physicalName="staintype_treatment_fk" pk-table-ref="TAB6" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP46" populated="true" UUID="8f97438d-567f-459c-983d-b24efa3db4d1" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL7" />
    </relationship>
-   <relationship id="REL47" populated="true" UUID="9bed7272-badd-48a1-81b8-cd0887f4c074" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="true" name="Treatment_Supplies_fk" physicalName="Treatment_Supplies_fk" pk-table-ref="TAB19" pkCardinality="2" updateRule="3" >
+   <relationship id="REL47" populated="true" UUID="9bed7272-badd-48a1-81b8-cd0887f4c074" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="true" name="Treatment_Supplies_fk" physicalName="treatment_supplies_fk" pk-table-ref="TAB19" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP48" populated="true" UUID="e6f98d7c-f2e7-44be-9847-8e8a4e1d5b6e" fk-column-ref="COL30" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL20" />
    </relationship>
-   <relationship id="REL49" populated="true" UUID="c4cbc3bc-cdfa-47f5-89a1-36644d74ca5f" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="true" name="TreatmentSupply_Supplies_fk" physicalName="TreatmentSupply_Supplies_fk" pk-table-ref="TAB37" pkCardinality="2" updateRule="3" >
+   <relationship id="REL49" populated="true" UUID="c4cbc3bc-cdfa-47f5-89a1-36644d74ca5f" deferrability="7" deleteRule="3" fk-table-ref="TAB27" fkCardinality="7" identifying="true" name="TreatmentSupply_Supplies_fk" physicalName="treatmentsupply_supplies_fk" pk-table-ref="TAB37" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP50" populated="true" UUID="c28175a4-7036-48c0-988a-b7159b0e6262" fk-column-ref="COL29" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL38" />
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="true"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.1892071150027204" viewportX="0" viewportY="4" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
