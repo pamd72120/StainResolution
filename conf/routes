@@ -2,6 +2,22 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
+# GET     /newuser                       controllers.UserController.getNewUser
+# POST    /newuser                       controllers.UserController.postNewUser
+
+
+GET     /staintype                  controllers.StainTypeController.getStainType
+
+
+GET     /textile                    controllers.TextileController.getTextile
+
+
+GET     /treatment                  controllers.TreatmentController.getTreatment
+
+GET     /treatmentsupply            controllers.TreatmentSupplyController.getTreatmentSupply
+
+
+
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 # An example controller showing how to use dependency injection

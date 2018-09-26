@@ -1,0 +1,48 @@
+package controllers;
+import models.User;
+
+import play.data.DynamicForm;
+import play.data.FormFactory;
+import play.db.jpa.JPAApi;
+import play.db.jpa.Transactional;
+import play.mvc.Controller;
+import play.mvc.Result;
+
+import javax.inject.Inject;
+
+public class UserController extends Controller
+{
+    private JPAApi jpaApi;
+    private FormFactory formFactory;
+    @Inject
+    public UserController(JPAApi jpaApi, FormFactory formFactory)
+    {
+        this.jpaApi = jpaApi;
+        this.formFactory = formFactory;
+    }
+    public Result getNewUser()
+    {
+        return ok(views.html.user.render());
+    }
+    @Transactional
+    public Result postNewUser()
+    {
+        DynamicForm form=formFactory.form().bindFromRequest();
+        String userName = form.get("user");
+        String result;
+
+        if (userName != null && userName.length()>=5)
+        {
+            User newUser = new User();
+            newUser.setUserName(userName);
+            jpaApi.em().persist(newUser);
+            result="saved";
+        }
+        else
+        {
+            result="not saved";
+        }
+        return ok(userName);
+    }
+}
+

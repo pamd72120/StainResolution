@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New User</title>
+</head>
+<body>
+<h3> New User</h3>
+<form method="post">
+    @helper.CSRF.formField
+    <label for ="user">Title:</label><input id="user" name="user=" type="text"><br>
+    <input type="submit" value="save">
+</form>
+
+</body>
+</html>
