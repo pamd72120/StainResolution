@@ -35,11 +35,12 @@ public class UserController extends Controller
         String passWord = form.get("passWord");
         String result;
 
-        if (userName != null && userName.length() >= 5)
+        if (userName != null)
         {
+            System.out.println("USERNAME: " + userName);
             User newUser = new User();
             newUser.setUserName(userName);
-            newPassWord.setPassWord(passWord);
+            newUser.setPassWord(passWord);
             
             jpaApi.em().persist(newUser);
             result = "saved";
@@ -47,7 +48,7 @@ public class UserController extends Controller
         {
             result = "not saved";
         }
-        return ok(userName);
+        return redirect("/staintype");
     }
 
    

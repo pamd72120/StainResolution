@@ -15,7 +15,7 @@ import javax.persistence.Id;
         private String passWord;
 
 
-        public void setUserName(String titleName)
+        public void setUserName(String userName)
         {
             this.userName = userName;
         }

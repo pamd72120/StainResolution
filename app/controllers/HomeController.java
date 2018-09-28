@@ -10,12 +10,14 @@ import play.mvc.Result;
 import views.html.welcome;
 
 import javax.inject.Inject;
+import java.util.List;
 
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
  */
-public class HomeController extends Controller {
+public class HomeController extends Controller
+{
 
     /**
      * An action that renders an HTML page with a welcome message.
@@ -25,33 +27,42 @@ public class HomeController extends Controller {
      */
     private JPAApi jpaApi;
     private FormFactory formFactory;
+    private List<models.StainType> StainType;
+
     @Inject
-    public HomeController(JPAApi jpaApi,FormFactory formFactory)
+    public HomeController(JPAApi jpaApi, FormFactory formFactory)
     {
         this.jpaApi = jpaApi;
-        this.formFactory=formFactory;
+        this.formFactory = formFactory;
     }
-    public Result index() {
+
+    public Result index()
+    {
         return ok(welcome.render("Welcome to DIY Stain Resolution."));
     }
+
     @Transactional
     public Result postNewUser()
     {
-        DynamicForm form=formFactory.form().bindFromRequest();
+        DynamicForm form = formFactory.form().bindFromRequest();
         String userName = form.get("user");
         String result;
 
-        if (userName != null && userName.length()>=5)
+        if (userName != null)
         {
             User newUser = new User();
             newUser.setUserName(userName);
             jpaApi.em().persist(newUser);
-            result="saved";
-        }
-        else
+            result = "saved";
+        } else
         {
-            result="not saved";
+            result = "not saved";
         }
-        return ok(userName);
+        return redirect("/staintype");
+    }
+
+    public Result nextPage()
+    {
+        return ok(views.html.StainType.render(StainType));
     }
 }
