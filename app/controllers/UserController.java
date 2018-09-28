@@ -1,6 +1,5 @@
 package controllers;
 import models.User;
-
 import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
@@ -14,35 +13,45 @@ public class UserController extends Controller
 {
     private JPAApi jpaApi;
     private FormFactory formFactory;
+    private User newPassWord;
+
     @Inject
     public UserController(JPAApi jpaApi, FormFactory formFactory)
     {
         this.jpaApi = jpaApi;
         this.formFactory = formFactory;
     }
+
     public Result getNewUser()
     {
         return ok(views.html.user.render());
     }
+
     @Transactional
     public Result postNewUser()
     {
-        DynamicForm form=formFactory.form().bindFromRequest();
+        DynamicForm form = formFactory.form().bindFromRequest();
         String userName = form.get("user");
+        String passWord = form.get("passWord");
         String result;
 
-        if (userName != null && userName.length()>=5)
+        if (userName != null && userName.length() >= 5)
         {
             User newUser = new User();
             newUser.setUserName(userName);
+            newPassWord.setPassWord(passWord);
+            
             jpaApi.em().persist(newUser);
-            result="saved";
-        }
-        else
+            result = "saved";
+        } else
         {
-            result="not saved";
+            result = "not saved";
         }
         return ok(userName);
     }
+
+   
+
+    
 }
 

@@ -1,4 +1,4 @@
-name := """play-java-starter-example"""
+name := """stain-resolution"""
 
 version := "1.0-SNAPSHOT"
 
@@ -9,7 +9,8 @@ scalaVersion := "2.12.6"
 crossScalaVersions := Seq("2.11.12", "2.12.4")
 
 libraryDependencies += guice
-
+libraryDependencies += "org.webjars" % "bootstrap" % "4.1.3"
+libraryDependencies += "org.webjars.npm" % "chart.js" % "2.7.2"
 //  Database
 libraryDependencies += javaJpa
 libraryDependencies += javaJdbc

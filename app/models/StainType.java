@@ -8,7 +8,7 @@ public class StainType
 {
    @Id private int stainTypeId;
    private String typeName;
-   private byte[] picture;
+   private byte[] stainPicture;
 
 
     public int getStainTypeId()
@@ -31,13 +31,13 @@ public class StainType
         this.typeName = typeName;
     }
 
-    public byte[] getPicture()
+    public byte[] getStainPicture()
     {
-        return picture;
+        return stainPicture;
     }
 
-    public void setPicture(byte[] picture)
+    public void setStainPicture(byte[] stainPicture)
     {
-        this.picture = picture;
+        this.stainPicture = stainPicture;
     }
 }

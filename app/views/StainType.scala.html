@@ -1,26 +1,34 @@
+@(StainTypes:List[StainType])
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Stain Type</title>
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+    <script src="/assets/lib/jquery/jquery.min.js"></script>
+    <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="dropdown">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        Dropdown button
-    </button>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">grass</a>
-        <a class="dropdown-item" href="#">blood</a>
-        <a class="dropdown-item" href="#">oil</a>
-        <a class="dropdown-item" href="#">coffee</a>
-        <a class="dropdown-item" href="#">chocolate</a>
-        <a class="dropdown-item" href="#">ketchup/bbq</a>
-        <a class="dropdown-item" href="#">ink</a>
-        <a class="dropdown-item" href="#">blueberry</a>
-        <a class="dropdown-item" href="#">red clay</a>
+<div class="container-fluid">
+<p>
+   We all know that in our busy, everyday lives accidents can happen.  Things get spilled,
+    dropped, or knocked over, and if you have kids, you have messes. Not to worry, help is here.
+    Below you can start by choosing the type of stain closest to your issue.
+</p>
+<form action="/textile">
+    <label for="StainType">Title:Stain Type </label>
+    <select class="form-control" id="staintype" name="staintype">
+        @for(StainType <- StainTypes){
+        <option value="@StainType.getStainTypeId">@StainType.getTypeName</option>
+        }
+    </select>
 
-    </div>
+        <input type="submit" class="form-control btn-primary" value="Next">
+    </form>
+
+    <form >
+        <a href="\" type="btn" class="btn">Previous</a>
+    </form>
 </div>
 </body>
 </html>

@@ -23,8 +23,8 @@ public class TreatmentController extends Controller
     {
         String sql="SELECT t FROM Treatment t ORDER BY treatmentId";
 
-        List<Treatment> treatments=jpaApi.em().createQuery(sql,Treatment.class).getResultList();
-        return ok(""+treatments.size());
+        List<Treatment> treatments = jpaApi.em().createQuery(sql,Treatment.class).getResultList();
+        return ok(views.html.treatment.render(treatments));
     }
 }
 

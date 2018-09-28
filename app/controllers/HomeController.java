@@ -1,8 +1,15 @@
 package controllers;
 
-import play.mvc.*;
+import models.User;
+import play.data.DynamicForm;
+import play.data.FormFactory;
+import play.db.jpa.JPAApi;
+import play.db.jpa.Transactional;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.welcome;
 
-import views.html.*;
+import javax.inject.Inject;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -16,8 +23,35 @@ public class HomeController extends Controller {
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>.
      */
-    public Result index() {
-        return ok(index.render("Welcome to DIY Stain Resolution."));
+    private JPAApi jpaApi;
+    private FormFactory formFactory;
+    @Inject
+    public HomeController(JPAApi jpaApi,FormFactory formFactory)
+    {
+        this.jpaApi = jpaApi;
+        this.formFactory=formFactory;
     }
+    public Result index() {
+        return ok(welcome.render("Welcome to DIY Stain Resolution."));
+    }
+    @Transactional
+    public Result postNewUser()
+    {
+        DynamicForm form=formFactory.form().bindFromRequest();
+        String userName = form.get("user");
+        String result;
 
+        if (userName != null && userName.length()>=5)
+        {
+            User newUser = new User();
+            newUser.setUserName(userName);
+            jpaApi.em().persist(newUser);
+            result="saved";
+        }
+        else
+        {
+            result="not saved";
+        }
+        return ok(userName);
+    }
 }

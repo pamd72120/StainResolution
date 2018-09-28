@@ -12,6 +12,7 @@ import javax.persistence.Id;
         @Id
         @GeneratedValue(strategy= GenerationType.IDENTITY)private int userId;
         private String userName;
+        private String passWord;
 
 
         public void setUserName(String titleName)
@@ -27,6 +28,16 @@ import javax.persistence.Id;
         public String getUserName()
         {
             return userName;
+        }
+
+        public String getpassWord()
+        {
+            return passWord;
+        }
+
+        public void setPassWord(String passWord)
+        {
+            this.passWord=passWord;
         }
     }
 

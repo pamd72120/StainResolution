@@ -1,16 +1,16 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
-
-# GET     /newuser                       controllers.UserController.getNewUser
-# POST    /newuser                       controllers.UserController.postNewUser
+ GET     /newuser                       controllers.UserController.getNewUser
+ POST    /newuser                       controllers.UserController.postNewUser
 
 
 GET     /staintype                  controllers.StainTypeController.getStainType
+# POST    /staintype                  controllers.StainTypeController.postStainType
 
 
 GET     /textile                    controllers.TextileController.getTextile
-
+POST    /textile                    controllers.TextileController.postTextile
 
 GET     /treatment                  controllers.TreatmentController.getTreatment
 
