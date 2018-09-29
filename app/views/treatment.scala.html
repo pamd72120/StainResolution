@@ -1,4 +1,4 @@
-@(Treatments:List[Treatment])
+@(treatments:List[Treatment])
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,63 +6,8 @@
     <title>Instructions</title>
 </head>
 <body>
-    <p>To get grass stains out of synthetic blends, first soak in cold water.
-        Second, treat the stain with plain white vinegar or rubbing alcohol and let sit.
-        Next wash as you normally would, following label instructions.</p>
-
-    <p>To get blood out of clothing, first soak in a mixture of 50% cold water
-        and 50% hydrogen peroxide. If stain persists, make a mixture of salt and
-        water to form a paste. Rub the paste into the stain and let sit. Next launder
-        following label instructions, but do not dry until stain removal is done because
-        heat will cause the stain to set permanently.</p>
-
-    <p>To remove oil stains from clothing,blot away any excess grease or oil with a paper towel.
-        Cover grease or oil stain generously with baby powder.
-        Remove the baby powder from the clothing with a paper towel or spoon.
-        Work a small amount of hand dishwashing detergent and water into stain with your thumb.
-        Wash the clothing, alone, with laundry detergent.</p>
-
-    <p> To get coffee out of clothing,fill a basin or sink with warm water and"+
-        half a teaspoon of a mild liquid dishwashing detergent.
-        Soak the garment in the solution for fifteen minutes.
-        Rinse well with cold water.
-        If the stain is still visible then carefully dab at it with
-        rubbing alcohol on a clean sponge.</p>
-
-    <p> To remove chocolate from clothing, make a paste of one part Dawn Dishsoap
-        and two parts hydrogen peroxide.  Use a clean, white cloth or sponge to add
-        mixture to stain and allow to sit 15 minutes.  Launder following label instructions,
-        repeating as necessary, but do not dry until stain is gone.</p>
-
-    <p> To remove ketchup or tomato based stains from your clothes,
-        run cold water through the back of the stain as quickly as possible.
-        This will force the stain back out through the fabric.
-        Rub a liquid detergent or dish soap into the stained portion of the fabric.
-        Work it in gently in a circular motion.Wash as usual.
-        </p>
-
-    <p>To remove ink stains from clothing, dab rubbing alcohol onto the ink.
-        Allow a couple of minutes for the alcohol to penetrate the surface and react with the ink.
-        Blot the ink stain using layers of white paper towels or a cloth that has been dampened in either alcohol or water. </p>
-
-     <p>To remove berry stains from clothing, The Lemon Juice Method:
-         Rub a freshly cut lemon into the stain. Rinse with water,
-         blot out all the moisture you can, and let it air dry.
-         If stain remains, sponge with wet spotter* and a few drops of vinegar.
-         (Dilute the vinegar with two parts water for use on cotton or linen.)
-         If the stain remains, soak in detergent for 30 minutes to an hour and
-         re-launder.</p>
-
-    <p> Dampen dirt stain on your fabric.
-        Squirt liquid dish soap onto the stain to cover it and allow it to sit overnight.
-        Launder uniform according to directions.
-        If the stain persists, tackle it with a paste
-        of equal parts dishwasher detergent
-        and water. Let sit two to three hours. Launder your uniform again
-        in the washing machine.
-        </p>
+    @for(treatment<-treatments){
+    <p>treatment.getInstruction</p>
+    }
 </body>
-<form >
-    <a href="\textile" type="btn" class="btn">Previous</a>
-</form>
-</html>
+    </html>
