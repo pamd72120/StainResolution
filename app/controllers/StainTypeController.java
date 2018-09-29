@@ -1,12 +1,11 @@
 package controllers;
 
-import play.data.DynamicForm;
+import models.StainType;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
 import play.mvc.Controller;
 import play.mvc.Result;
-import models.StainType;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -24,6 +23,7 @@ public class StainTypeController extends Controller
     @Transactional(readOnly = true)
     public Result getStainType()
     {
+
         String sql="SELECT s FROM StainType s ORDER BY TypeName";
 
         List<StainType> StainType=jpaApi.em().createQuery(sql,StainType.class).getResultList();
@@ -31,14 +31,5 @@ public class StainTypeController extends Controller
         return ok(views.html.StainType.render(StainType));
 
     }
-    public Result postStainType(List<models.Textile> textileName)
-    {
-        DynamicForm form = formFactory.form().bindFromRequest();
 
-        String typeName = form.get("typeName");
-
-
-
-        return ok(views.html.Textile.render(textileName));
-    }
 }

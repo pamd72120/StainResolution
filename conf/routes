@@ -6,7 +6,7 @@
 
 
 GET     /staintype                  controllers.StainTypeController.getStainType
-# POST    /staintype                  controllers.StainTypeController.postStainType
+
 
 
 GET     /textile                    controllers.TextileController.getTextile

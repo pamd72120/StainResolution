@@ -25,15 +25,19 @@ public class TextileController extends Controller
     @Transactional(readOnly = true)
     public Result getTextile()
     {
+        DynamicForm form = formFactory.form().bindFromRequest();
+        String stainTypeId = form.get("staintype");
+
         String sql="SELECT t FROM Textile t ORDER BY textileName";
 
         List<Textile> textiles = jpaApi.em().createQuery(sql,Textile.class).getResultList();
-        return ok(views.html.Textile.render(textiles));
+        return ok(views.html.Textile.render(stainTypeId,textiles));
     }
     public Result postTextile()
     {
         DynamicForm form = formFactory.form().bindFromRequest();
 
+        String stainTypeId = form.get("staintype");
         String textileName = form.get("textileName");
 
         String sql="SELECT t FROM Treatment t ORDER BY treatmentID";
