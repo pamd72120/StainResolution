@@ -1,30 +1,48 @@
 @(StainTypes:List[StainType])
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Stain Type</title>
     <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/staintype.css">
     <script src="/assets/lib/jquery/jquery.min.js"></script>
     <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
+<form>
 <div class="container-fluid">
 <p>
    We all know that in our busy, everyday lives accidents can happen.  Things get spilled,
-    dropped, or knocked over, and if you have kids, you have messes. Not to worry, help is here.
+    dropped or knocked over, AND if you have kids, you have <span id="MESSES">MESSES!</span> Not to worry, help is here.
     Below you can start by choosing the type of stain closest to your issue.
+
 </p>
+    <div class="row">
+        <div class="col-3">
 <form action="/textile">
-    <label for="StainType">Title:Stain Type </label>
-    <select class="form-control" id="staintype" name="staintype">
+    <label for="StainType">Stain Type </label>
+    <select class="form-control text-dark" id="staintype" name="stainTypeId">
         @for(StainType <- StainTypes){
         <option value="@StainType.getStainTypeId">@StainType.getTypeName</option>
         }
     </select>
 
-        <input type="submit" class="form-control btn-primary" value="Next">
-    </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+    <input type="submit" class="form-control btn-primary btn-md" value="Next" >
+    </div>
+    </div>
+    </div>
+</form>
+<div class="row">
 
     <form >
         <a href="\" type="btn" class="btn">Previous</a>

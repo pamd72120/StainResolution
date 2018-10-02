@@ -11,22 +11,37 @@
 <body>
 
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
 
         <form action="/treatment">
             <input type="hidden" value="@stainTypeId" name="stainTypeId">
             <label for="Textile">Title:Textile</label>
-            <select class="form-control" id="textile" name="textile">
+            <select class="form-control text-dark" id="textile" name="textile">
 
             @for(textile <-textiles){
                 <option value="@textile.getTextileId">@textile.getTextileName</option>
                 }
             </select>
-
-            <input type="submit" class="form-control btn-primary" value="Next">
         </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+            <input type="submit" class="form-control btn-primary" value="Next">
+            </div>
         <form >
             <a href="\staintype" type="btn" class="btn">Previous</a>
         </form>
+            </div>
+        </div>
 
 </div>
 </form>

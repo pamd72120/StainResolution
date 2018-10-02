@@ -38,7 +38,7 @@ public class HomeController extends Controller
 
     public Result index()
     {
-        return ok(welcome.render("Welcome to DIY Stain Resolution."));
+        return ok(welcome.render("Welcome to the DIY Spot Removal App!"));
     }
 
     @Transactional
@@ -58,7 +58,7 @@ public class HomeController extends Controller
         {
             result = "not saved";
         }
-        return redirect("/staintype");
+        return redirect("/staintype.css");
     }
 
     public Result nextPage()

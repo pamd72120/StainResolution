@@ -26,7 +26,7 @@ public class TextileController extends Controller
     public Result getTextile()
     {
         DynamicForm form = formFactory.form().bindFromRequest();
-        String stainTypeId = form.get("staintype");
+        String stainTypeId = form.get("staintype.css");
 
         String sql="SELECT t FROM Textile t ORDER BY textileName";
 
@@ -37,7 +37,7 @@ public class TextileController extends Controller
     {
         DynamicForm form = formFactory.form().bindFromRequest();
 
-        String stainTypeId = form.get("staintype");
+        String stainTypeId = form.get("staintype.css");
         String textileName = form.get("textileName");
 
         String sql="SELECT t FROM Treatment t ORDER BY treatmentID";
