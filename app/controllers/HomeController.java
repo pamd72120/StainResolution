@@ -38,7 +38,7 @@ public class HomeController extends Controller
 
     public Result index()
     {
-        return ok(welcome.render("Welcome to the DIY Spot Removal App!"));
+        return ok(welcome.render("Welcome to the DIY Stain Removal App!"));
     }
 
     @Transactional
