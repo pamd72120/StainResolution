@@ -2,14 +2,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
+
+
     <meta charset="UTF-8">
     <title>Stain Type</title>
     <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/stylesheets/staintype.css">
     <script src="/assets/lib/jquery/jquery.min.js"></script>
     <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+
+
 </head>
-<form>
+
+<body>
+<form action="/textile">
 <div class="container-fluid">
 <p>
    We all know that in our busy, everyday lives accidents can happen.  Things get spilled,
@@ -19,7 +25,7 @@
 </p>
     <div class="row">
         <div class="col-3">
-<form action="/textile">
+
     <label for="StainType">Stain Type </label>
     <select class="form-control text-dark" id="staintype" name="stainTypeId">
         @for(StainType <- StainTypes){
@@ -42,6 +48,7 @@
     </div>
     </div>
 </form>
+
 <div class="row">
 
     <form >
@@ -49,4 +56,6 @@
     </form>
 </div>
 </body>
+
+
 </html>

@@ -48,7 +48,7 @@ public class UserController extends Controller
         {
             result = "not saved";
         }
-        return redirect("/staintype.css");
+        return redirect("/staintype");
     }
 
    

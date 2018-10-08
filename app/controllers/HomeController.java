@@ -58,7 +58,7 @@ public class HomeController extends Controller
         {
             result = "not saved";
         }
-        return redirect("/staintype.css");
+        return redirect("/staintype");
     }
 
     public Result nextPage()

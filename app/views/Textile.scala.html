@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <title>Textiles</title>
     <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/staintype.css">
     <script src="/assets/lib/jquery/jquery.min.js"></script>
     <script src="/assets/lib/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
 
     <div class="container-fluid">
+        <form action="/treatment">
         <div class="row">
             <div class="col-3">
 
-        <form action="/treatment">
+
             <input type="hidden" value="@stainTypeId" name="stainTypeId">
             <label for="Textile">Title:Textile</label>
             <select class="form-control text-dark" id="textile" name="textile">
@@ -23,7 +27,7 @@
                 <option value="@textile.getTextileId">@textile.getTextileName</option>
                 }
             </select>
-        </form>
+
             </div>
         </div>
 
@@ -37,10 +41,12 @@
             <div class="col-3">
             <input type="submit" class="form-control btn-primary" value="Next">
             </div>
+        </div>
         <form >
             <a href="\staintype" type="btn" class="btn">Previous</a>
         </form>
-            </div>
+
+        </form>
         </div>
 
 </div>
